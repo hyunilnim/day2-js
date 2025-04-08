@@ -1,7 +1,44 @@
-.box {
-    width: 300px;
-    height: 300px;
-    margin: 50px;
-    background-color: aqua;
-    transition: 0.5s;
+/* 
+    position
+
+    - 자잘한 요소들을 좌표값을 사용해서 자유롭게 배치
+    - 부모 프레임에 position: relative 설정
+    - 배치할 요소에 positioin: absolute;
+    - 가로(left, right), 세로(top, bottom) 좌표값 설정
+    - absolute 활용하면 블록요소를 겹치도록 처리 가능
+*/
+
+.frame {
+  width: 350px;
+  height: 700px;
+  border: 1px solid black;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+.frame .btnCall {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+/* 비활성화 상태일떄 (on클래스 없을때) */
+.frame .mobileMenu {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+/* 활성화 상태일떄 (on클래스 있을때) */
+.frame .mobileMenu.on {
+  right: 0%;
+  opacity: 1;
+}
+.frame .mobileMenu .btnClose {
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
