@@ -79,3 +79,14 @@ console.log("제 이름은 " + myName + "입니다.");
 
 //위와 같은 번거로움을 개선하고자 ES6에서는 문자열 템플릿 문법이 생김
 console.log(`제 이름은 ${myName}입니다.`);
+
+/*
+  문자를 숫자로 형변환 처리:
+  parseInt(문자화된 숫자) : 정수 변환
+  parseFloat(문자화된 숫자) : 실수 변환
+*/
+
+let num = "3.5";
+console.log(typeof num);
+num = parseFloat(num)
+console.log(typeof num);
