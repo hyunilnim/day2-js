@@ -90,3 +90,21 @@ let num = "3.5";
 console.log(typeof num);
 num = parseFloat(num)
 console.log(typeof num);
+
+//사용자 정보를 입력받아 콘솔문으로 출력해주는 함수 제작
+//이름, 나이, 성별
+//함수 내부에서는 "홍길동님의 나이는 20살이고 성별은 남성입니다" 출력
+//대입형 함수(화살표 함수)활용
+//3개의 인자값 중 하나라도 없으면 경고문 출력
+
+const profile = (name, age, gender) => {
+  if (!name || !age || !gender) {
+    console.error("매개변수 값이 잘못 전달되었습니다.");
+  }
+  else {
+    console.log(`${name}님의 나이는 ${age}살이고 성별은 ${gender}입니다.`)
+  }
+};
+
+profile("김현일", 20, "남성")
+profile("김현일")
