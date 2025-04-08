@@ -1,3 +1,7 @@
-h1 {
-    color: hotpink;
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    background-color: aqua;
+    transition: 0.5s;
 }
